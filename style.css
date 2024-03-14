@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  font-family: "Old Standard TT", serif;
+}
+
+body {
+  margin: 0;
+  margin-right: 2rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 71, 31);
+}
+
+.wrapper {
+  width: max-content;
+  padding: 30px 40px 40px;
+  border-radius: 20px;
+  background: linear-gradient(-65deg, #000, #222, #000,#666, #222 75%);
+  box-shadow: inset 0 -1px 1px #ffffff70, 
+  inset -0.4rem 0.4rem #282828,
+   0 0 50px #00000080 inset, 
+   0 5px 15px #00000080;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.wrapper header {
+  display: flex;
+  color: #B2B2B2;
+  align-items: center;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  line-height: 4rem;
+  margin-top: 0;
+}
+
+.piano-keys{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+
+.piano-keys .white {
+  height: 250px;
+  width: 70px;
+  border: 1px solid #000;
+  border-left: 1px solid #fff2;
+  border-bottom: 1px solid #bababa;
+  border-radius: 0 0 5px 5px;
+  box-shadow: -1px 0 0 #ffffffcc inset,
+              0 0 3px #00000033,
+              inset -15x 20px #0006,
+              inset 3px 0px 20px #fff,
+              0 5px 5px #000;
+  background: linear-gradient(
+    to bottom, hsl(0, 0%, 93%) 0%,
+    white 100%
+  );
+  color: #0000004d;
+}
+
+.piano-keys .white.active{
+  background: linear-gradient(-180deg, #313131 50%, #545454 100%);
+}
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+.piano-keys .key span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #a2a2a2;
+  font-size: 18px;
+  text-align: center;
+  color: #0000004d;
+  font-weight: 500;
+}
+
+.piano-keys .black {
+  z-index: 2;
+  width: 44px;
+  height: 160px;
+  margin: 0 -22px 0 -22px;
+  border: 1px solid #000;
+  border-radius: 0 0 3px 3px;
+  box-shadow: -1px -1px 2px #ffffff33 inset, 
+  0 -5px 2px 3px #00000099 inset,
+   0 2px 4px #00000080;
+  background: linear-gradient(45deg, #212121 0%, #545454 100%);
+  color: #ffffff80;
+}
+.piano-keys .black.active {
+  background: linear-gradient(-180deg, #313131 50%, #545454 100%);
+}
